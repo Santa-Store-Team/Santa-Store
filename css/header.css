@@ -1,0 +1,23 @@
+body {
+    color: #ecffeb;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .logo-header {
+    display: flex;
+    }
+    
+    #rubrik-logo-green {
+    color: #2d661b;
+    }
+    
+    #logo-green {
+      height: 40px;
+      width: 40px;
+      margin: 11px 15px;
+      box-shadow: none;
+    }

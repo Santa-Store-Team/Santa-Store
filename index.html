@@ -4,23 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Santa Store</title>
 </head>
 
 <body>
-    <!-- någon wrap <div id="grid-container" class="grid"> -->
-        <header>
-            <div class="header-top">
-                <div class="logo-header">
-                    <a href=""><img src="img/[CITYPNG.COM]HD Green Christmas Tree Icon PNG - 1000x1000.png"
-                            alt="Logo grön" id="logo-green"></a>
-                    <h2 id="rubrik-logo-green">Juletider</h2>
-                </div>
+    <header>
+        <div class="header-top">
+            <!-- Logotyp -->
+            <div class="logo-header">
+                <a href="#"><img src="img/[CITYPNG.COM]HD Green Christmas Tree Icon PNG - 1000x1000.png"
+                        alt="Logo grön" id="logo-green"></a>
+                <h2 id="rubrik-logo-green">Juletider</h2>
             </div>
-            <section class="image-container">
-                <img src="img/Kopia av Beige and Red Modern Festive Merry Christmas Email Header.png"
-                    alt="home-image">
-            </section>
-        </header>
+    
+            <!-- Navigationslänkar -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    
+            <div class="right-link">
+                <a href="https://translate.google.com/"><i class="fa-solid fa-globe"></i> Språk</a>
+            </div>
+    
+            <!-- Menyknapp för mobila enheter -->
+            <button class="menu-button" aria-expanded="false">
+                <i class="fa-solid fa-star"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="image-container">
+        <img src="img/Kopia av Beige and Red Modern Festive Merry Christmas Email Header.png" alt="home-image">
+    </section>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

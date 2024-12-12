@@ -37,6 +37,9 @@ body {
   margin: 0;
 }
 
+#home-christmas-image {
+  width: 100%;
+}
 .nav-links {
   list-style: none;
   display: flex;

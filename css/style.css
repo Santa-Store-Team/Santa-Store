@@ -22,9 +22,22 @@ body {
     }
 
     #home-christmas-image{
-        margin-left: 15%;
-    margin-right: 15%;
-    width: 70%;
+    width: 100%;
     }
 
+@media (max-width: 768px) {
+    #logo-green {
+        height: 35px;
+        width: 35px;
+        margin: 10px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo-green {
+        height: 30px;
+        width: 30px;
+        margin: 8px 8px;
+    }
+}
     

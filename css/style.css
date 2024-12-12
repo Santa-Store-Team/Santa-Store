@@ -1,24 +1,20 @@
-/* Body styling */
-
 body {
   margin: 0;
 }
 
-/* Header styling */
 .header-top {
   display: flex;
   align-items: center;
   justify-content: space-between; 
   padding: 0.5rem 1rem; 
   margin: 0;
-  width: 100;
+  width: 100%;
   background-color: #ffebeb;
   border-bottom: 1px solid #ccc;
   position: relative;
   box-sizing: border-box;
 }
 
-/* Logotyp */
 .logo-header {
   display: flex;
   align-items: center;
@@ -37,7 +33,6 @@ body {
   margin: 0;
 }
 
-/* Navigationslänkar */
 .nav-links {
   list-style: none;
   display: flex;
@@ -53,47 +48,29 @@ body {
   display: inline-block;
 }
 
-.nav-links a {
+.nav-links a,
+.right-link a {
   text-decoration: none;
   color: black;
-  font-size: 1rem;
+  font-size: 1rem; 
   padding: 0.5rem 1rem; 
   display: inline-block;
   transition: background-color 0.3s ease; 
 }
 
-.nav-links a:hover {
-  background-color: #ffc9c9;
-  border-radius: 5px;
-}
-
-.nav-links a.active {
-  background-color: #ffc9c9; 
-  color: black;
-  border-radius: 5px;
-}
-
+.nav-links a:hover,
 .right-link a:hover {
   background-color: #ffc9c9;
   border-radius: 5px;
 }
 
+.nav-links a.active,
 .right-link a.active {
   background-color: #ffc9c9; 
   color: black;
   border-radius: 5px;
 }
 
-.right-link a {
-  text-decoration: none;
-  color: black;
-  font-size: 1rem;
-  padding: 0.5rem 1rem; 
-  display: inline-block;
-  transition: background-color 0.3s ease; 
-}
-
-/* Menyknapp för mobila enheter */
 .menu-button {
   display: none;
   background: none;
@@ -111,71 +88,61 @@ body {
 
 .right-link {
   flex-shrink: 0; 
-}
-
-.right-link a {
-  text-decoration: none;
-  color: black;
-  font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
 .right-link a i {
-  font-size: 1.2rem; 
+  font-size: 1rem; 
   color: black;
-}
-
-.right-link a:hover {
-  text-decoration: underline;
 }
 
 /* Dropdown-meny för mobila enheter */
 @media (max-width: 600px) {
   .menu-button {
-      display: block; 
+    display: block; 
   }
 
   .nav-links {
-      display: none; 
-      position: absolute;
-      top: 100%; 
-      right: 1rem;
-      flex-direction: column;
-      background-color: white;
-      border: 1px solid #ccc;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 200px; 
-      left: auto; 
-      transform: none; 
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    right: 1rem;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px; 
+    left: auto; 
+    transform: none; 
   }
 
   .nav-links.active {
-      display: flex;
+    display: flex;
   }
 
   .nav-links li {
-      padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .right-link {
     display: none; 
-}
+  }
 }
 
 /* Horisontell meny för större skärmar */
 @media (min-width: 600px) {
   .menu-button {
-      display: none; 
+    display: none; 
   }
 
   .nav-links {
-      display: flex; 
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      flex-direction: row;
+    display: flex; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
   }
 }

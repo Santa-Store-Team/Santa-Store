@@ -18,17 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (product) {
                     const imgElement = productContainer.querySelector("img");
-
                     
+                    // Uppdatera bild
                     imgElement.src = product.image;
                     imgElement.alt = product.name;
 
-                    
+                    // Formatera pris
                     const price = product.price && product.price.$numberDecimal
                         ? parseFloat(product.price.$numberDecimal).toFixed(2)  
                         : 'Price not available';
 
-                    
+                    // Lägg till produktdetaljer
                     const detailsHTML = `
                         <h2>Product Name: ${product.name}</h2>
                         <p>Price: $${price}</p>
@@ -36,6 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p>Category: ${product.categories}</p>
                     `;
                     productContainer.insertAdjacentHTML("beforeend", detailsHTML);
+
+                    // Skapa och lägg till "Add to Cart"-knappen
+                    const button = document.createElement("button");
+                    button.textContent = "Add to Cart";
+                    button.className = "add-to-cart";
+                  
+                    productContainer.appendChild(button);
 
                     console.log(`Updated product ${index + 1}:`, product.name);
                 } else {

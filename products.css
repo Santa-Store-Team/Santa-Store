@@ -4,6 +4,7 @@ body {
   font-family: sans-serif;
 }
 
+
 #product-page-1, #product-page-2, #product-page-3, #product-page-4 {
   display: flex;
   flex-wrap: wrap;
@@ -25,6 +26,22 @@ body {
   position: relative;
 }
 
+button.add-to-cart {
+  margin-top: auto; 
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.add-to-cart:hover {
+  background-color: rgb(0, 78, 0);
+}
+
 .product:hover {
   transform: scale(1.02);
 }
@@ -44,6 +61,8 @@ h2, p {
   border-radius: 5px;
   padding: 3px;
 }
+
+
 
 
 

@@ -93,8 +93,11 @@ body.products-body {
       margin: 10px 0;
   }
 
-  .products-body img {
-      max-width: 90%;
+  .products-body #product-page-1 img, 
+  .products-body #product-page-2 img, 
+  .products-body #product-page-3 img, 
+  .products-body #product-page-4 img {
+      max-width: 100%;
   }
 }
 

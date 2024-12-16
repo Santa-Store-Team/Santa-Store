@@ -19,36 +19,58 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (product) {
                     const imgElement = productContainer.querySelector("img");
                     
-                    // Uppdatera bild
+                    
                     imgElement.src = product.image;
                     imgElement.alt = product.name;
 
-                    // Formatera pris
+                    
                     const price = product.price && product.price.$numberDecimal
                         ? parseFloat(product.price.$numberDecimal).toFixed(2)  
                         : 'Price not available';
 
-                    // Lägg till produktdetaljer
+                    
                     const detailsHTML = `
                         <h2>Product Name: ${product.name}</h2>
                         <p>Price: $${price}</p>
-                        <p>Description: ${product.description}</p>
-                        <p>Category: ${product.categories}</p>
+                        <div class="product-details" style="display: none;">
+                            <p>Description: ${product.description}</p>
+                            <p>Category: ${product.categories}</p>
+                        </div>
                     `;
                     productContainer.insertAdjacentHTML("beforeend", detailsHTML);
 
-                    // Skapa och lägg till "Add to Cart"-knappen
+                    
+                    const moreInfoButton = document.createElement("button");
+                    moreInfoButton.textContent = "See More"; 
+                    moreInfoButton.className = "extraButton"; 
+
+                    
                     const button = document.createElement("button");
                     button.textContent = "Add to Cart";
                     button.className = "add-to-cart";
                   
+
+                    productContainer.appendChild(moreInfoButton);
                     productContainer.appendChild(button);
 
-                    console.log(`Updated product ${index + 1}:`, product.name);
+                    
+                    moreInfoButton.addEventListener("click", () => {
+                        const productDetails = productContainer.querySelector(".product-details");
+
+                        
+                        if (productDetails.style.display === "none") {
+                            productDetails.style.display = "block"; 
+                            moreInfoButton.textContent = "See Less"; 
+                        } else {
+                            productDetails.style.display = "none"; 
+                            moreInfoButton.textContent = "See More"; 
+                        }
+                    });
                 } else {
                     console.warn(`No product data for container at index ${index}`);
                 }
             });
+            
         })
         .catch((error) => {
             console.error("Error fetching products:", error);

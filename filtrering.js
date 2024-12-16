@@ -10,7 +10,7 @@ function filterSelection(category) {
     }
   }
   
-
+  document.addEventListener("DOMContentLoaded", () => {
   const btnContainer = document.getElementById("Container");
   const buttons = btnContainer.getElementsByClassName("button");
   
@@ -21,5 +21,11 @@ function filterSelection(category) {
         current[0].classList.remove("active");
       }
       this.classList.add("active");
+
+      const category = this.getAttribute("onclick").match(/'([^']+)'/)[1]; 
+      filterSelection(category); 
     });
   }
+
+  filterSelection("all"); 
+}); 

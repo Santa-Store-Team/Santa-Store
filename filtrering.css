@@ -1,0 +1,32 @@
+.filterDiv {
+    display: none;
+  }
+  
+
+  .filterDiv.show {
+    display: block;
+  }
+
+  .button {
+    padding: 10px; 
+    background-color: white; 
+    color: #c21717;
+    border: 1px solid #c21717;
+    font-size: 14px; 
+    border-radius: 25px; 
+    text-transform: uppercase; 
+    transition: all 0.3s ease; 
+
+  }
+
+  .button:hover {
+    cursor: pointer; 
+    background-color: #c21717;
+    color: white; 
+  }
+
+  .button.active {
+    background-color: #c21717;
+    color: white; 
+    border-color: white; 
+  }

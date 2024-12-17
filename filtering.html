@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtreringsfunktion</title>
+    <link rel="stylesheet" href="filtrering.css">
+</head>
+<body>
+
+    <div id="Container">
+        <button class="button active" onclick="filterSelection('all')">Show All</button>
+        <button class="button" onclick="filterSelection('ChristmasTree')">Christmas Tree</button>
+        <button class="button" onclick="filterSelection('Equipment')">Equipment</button>
+        <button class="button" onclick="filterSelection('Decoration')">Decoration</button>
+        <button class="button" onclick="filterSelection('Gifts')">Gifts</button>
+        <button class="button" onclick="filterSelection('Candles')">Candles</button>
+    </div>
+
+     <!--Här kommer API'et rendera produkterna-->
+    <div id="productContainer"></div>
+
+    <script src="filtrering.js"></script>    
+</body>
+</html>

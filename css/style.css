@@ -144,6 +144,53 @@ body {
   .right-link {
     display: none; 
   }
+
+  #footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  #footer-logotype {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  #footer-logotype img {
+    height: 40px; 
+    width: 40px;
+  }
+
+  #footer-logotype h3 {
+    margin: 0; 
+    font-size: 1.1rem; 
+    font-weight: bold;
+    text-align: center; 
+  }
+
+  #footer-contacts,
+  #footer-menu {
+    text-align: center; 
+  }
+
+  #footer-contacts ul,
+  #footer-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+    align-items: center;
+  }
+
+  .li-header {
+    font-weight: bold; 
+    margin-bottom: 0.5rem; 
+  }
 }
 
 /* Horisontell meny för större skärmar */
@@ -176,7 +223,7 @@ body {
       background-color: #005c00;
       color: #fff2f2;
       text-align: center;
-      width: 80%;
+      width: 100%;
       min-height: 250px;
       display: flex;
       justify-content: space-evenly;

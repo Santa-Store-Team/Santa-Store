@@ -116,6 +116,7 @@ p, li, label, button, input, textarea {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 .right-link a i {

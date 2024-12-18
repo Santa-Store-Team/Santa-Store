@@ -1,0 +1,78 @@
+/* Container for the best-seller products */
+main {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background-color: #751717;
+}
+
+.best-sellers-container-wrapper {
+    width: 80%;
+    margin: 40px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #ecffeb;
+    color: #005c00;
+    padding: 30px;
+}
+
+.best-sellers-container {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin: 0;
+}
+
+#best-sellers-header {
+
+    /* margin: 50px, 0px, 0px, 0px; */
+}
+
+/* Product Card Styling */
+.product-card {
+    background-color: #ecffeb;
+    /* border-radius: 7px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    text-align: left;
+    padding: 0px, 30px, 30px, 60px;    
+    margin: 10px;
+    min-width: 27%;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+/* Image Styling */
+.product-image {
+    max-width: 300px;
+    width: 100%;
+    /* max-width: 400px; */
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    /* height: auto; */
+    /* border-radius: 8px; */
+    /* margin-bottom: 10px; */
+}
+
+/* Product Name Styling */
+.product-name {
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.product-description {
+    margin: 10px 0;
+    max-width: 300px;
+}
+
+/* Product Price Styling */
+.product-price {
+    /* font-size: 1.1em;
+    color: #333;
+    margin: 5px 0; */
+    font-weight: 700;
+}
+
+

@@ -30,18 +30,10 @@ async function fetchBestSellers() {
             descriptionElement.innerHTML = product.description;
             descriptionElement.classList.add("product-description")
 
-            // // Product Price
-            // const priceElement = document.createElement("p");
-            // const price = product.price.$numberDecimal
-            //     ? parseFloat(product.price.$numberDecimal).toFixed(2)
-            //     : 'Price not available';
-            // priceElement.textContent = `$${price}`;
-            // priceElement.classList.add("product-price");
-
-              // Product Price
-              const priceElement = document.createElement("p");
-              priceElement.innerHTML = product.price.$numberDecimal;
-              priceElement.classList.add("product-price");
+            // Product Price
+            const priceElement = document.createElement("p");
+        priceElement.innerHTML = `${product.price.$numberDecimal} SEK`;
+            priceElement.classList.add("product-price");
 
             // Append all elements to the product card
             productCard.appendChild(imgElement);
@@ -49,7 +41,6 @@ async function fetchBestSellers() {
             productCard.appendChild(descriptionElement);
             productCard.appendChild(priceElement);
             
-
             // Append product card to the container
             bestSellersContainer.appendChild(productCard);
         });

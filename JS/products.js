@@ -26,27 +26,27 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     const price = product.price && product.price.$numberDecimal
                         ? parseFloat(product.price.$numberDecimal).toFixed(2)  
-                        : 'Price not available';
+                        : 'Priset är inte tillgängligt';
 
                     
                     const detailsHTML = `
-                        <h2>Product Name: ${product.name}</h2>
-                        <p>Price: $${price}</p>
+                        <h2>Produkt Namn: ${product.name}</h2>
+                        <p>Pris: $${price}</p>
                         <div class="product-details" style="display: none;">
-                            <p>Description: ${product.description}</p>
-                            <p>Category: ${product.categories}</p>
+                            <p>Beskrivning: ${product.description}</p>
+                            <p>Kategori: ${product.categories}</p>
                         </div>
                     `;
                     productContainer.insertAdjacentHTML("beforeend", detailsHTML);
 
                     
                     const moreInfoButton = document.createElement("button");
-                    moreInfoButton.textContent = "See More"; 
+                    moreInfoButton.textContent = "Se Mer"; 
                     moreInfoButton.className = "extraButton"; 
 
                     
                     const button = document.createElement("button");
-                    button.textContent = "Add to Cart";
+                    button.textContent = "Lägg till i korg";
                     button.className = "add-to-cart";
                   
 
@@ -60,19 +60,19 @@ document.addEventListener("DOMContentLoaded", () => {
                         
                         if (productDetails.style.display === "none") {
                             productDetails.style.display = "block"; 
-                            moreInfoButton.textContent = "See Less"; 
+                            moreInfoButton.textContent = "Se mindre"; 
                         } else {
                             productDetails.style.display = "none"; 
-                            moreInfoButton.textContent = "See More"; 
+                            moreInfoButton.textContent = "Se Mer"; 
                         }
                     });
                 } else {
-                    console.warn(`No product data for container at index ${index}`);
+                    console.warn(`Ingen produktdata för behållaren vid index ${index}`);
                 }
             });
             
         })
         .catch((error) => {
-            console.error("Error fetching products:", error);
+            console.error("Fel vid hämtning av produkter:", error);
         });
 });

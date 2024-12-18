@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     const detailsHTML = `
                         <h2>Produkt Namn: ${product.name}</h2>
-                        <p>Pris: $${price}</p>
+                        <p>Pris: ${price} SEK</p>
                         <div class="product-details" style="display: none;">
                             <p>Beskrivning: ${product.description}</p>
                             <p>Kategori: ${product.categories}</p>

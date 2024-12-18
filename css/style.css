@@ -278,4 +278,16 @@ body {
   #home-christmas-image {
     display: none;
   }
+  #logo-green {
+    margin: 0%;
+  }
+} 
+
+@media only screen and (max-width: 768px) {
+  #rubrik-logo-green {
+    display: none;
+  }
+  #logo-green {
+    margin: 0%;
+  }
 }
